@@ -1,0 +1,44 @@
+[
+  {
+    "id": "wheat", "name": "Wheat", "scientificName": "Triticum aestivum",
+    "season": "Winter", "growthPeriod": "5-6 months", "sowingTime": "October-November",
+    "harvestTime": "March-April", "climate": "10-25°C, 300-900 mm", "soilType": "Loamy soil",
+    "pesticides": ["Carbendazim", "Trifloxystrobin", "Propiconazole"],
+    "fertilizers": ["Nitrogen", "Phosphorus", "Potassium"]
+  },
+  {
+    "id": "rice", "name": "Rice", "scientificName": "Oryza sativa",
+    "season": "Wet season", "growthPeriod": "3-6 months", "sowingTime": "June-July",
+    "harvestTime": "October-November", "climate": "20-35°C, 1000-2000 mm", "soilType": "Clayey or loamy soil",
+    "pesticides": ["Tricyclazole", "Chlorpyrifos", "Carbofuran"],
+    "fertilizers": ["Urea", "DAP", "MOP"]
+  },
+  {
+    "id": "maize", "name": "Maize", "scientificName": "Zea mays",
+    "season": "Wet season", "growthPeriod": "3-4 months", "sowingTime": "June-July",
+    "harvestTime": "September-October", "climate": "18-27°C, 500-800 mm", "soilType": "Well-drained loamy soil",
+    "pesticides": ["Atrazine", "Carbaryl", "Chlorantraniliprole"],
+    "fertilizers": ["Nitrogen", "Phosphorus", "Zinc"]
+  },
+  {
+    "id": "soybean", "name": "Soybean", "scientificName": "Glycine max",
+    "season": "Wet season", "growthPeriod": "3-4 months", "sowingTime": "June-July",
+    "harvestTime": "October", "climate": "20-30°C, 450-700 mm", "soilType": "Well-drained loam",
+    "pesticides": ["Quinalphos", "Thiamethoxam", "Chlorpyrifos"],
+    "fertilizers": ["Phosphorus", "Potassium", "Sulfur"]
+  },
+  {
+    "id": "sugarcane", "name": "Sugarcane", "scientificName": "Saccharum officinarum",
+    "season": "Year-round", "growthPeriod": "10-18 months", "sowingTime": "February-March",
+    "harvestTime": "December-March", "climate": "21-27°C, 1100-1500 mm", "soilType": "Deep loamy soil",
+    "pesticides": ["Chlorpyrifos", "Imidacloprid", "Carbofuran"],
+    "fertilizers": ["Nitrogen", "Phosphorus", "Potassium"]
+  },
+  {
+    "id": "potato", "name": "Potato", "scientificName": "Solanum tuberosum",
+    "season": "Cool season", "growthPeriod": "3-4 months", "sowingTime": "October-November",
+    "harvestTime": "January-March", "climate": "15-20°C, 400-600 mm", "soilType": "Sandy loam",
+    "pesticides": ["Mancozeb", "Metalaxyl", "Imidacloprid"],
+    "fertilizers": ["Nitrogen", "Phosphorus", "Potassium"]
+  }
+]
