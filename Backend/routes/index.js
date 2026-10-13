@@ -6,6 +6,7 @@ import productRoutes from "./product.js";
 import bookingRoutes from "./booking.js";
 import adminRoutes from "./admin.js";
 import cropInfoRoutes from "./cropInfo.js";
+import alertRoutes from "./alert.js";
 
 const router = express.Router();
 
@@ -16,5 +17,6 @@ router.use("/products", productRoutes);
 router.use("/bookings", bookingRoutes);
 router.use("/admin", adminRoutes);
 router.use("/crop-info", cropInfoRoutes);
+router.use("/alerts", alertRoutes);
 
 export default router;
