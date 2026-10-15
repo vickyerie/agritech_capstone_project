@@ -25,6 +25,38 @@ export const createAlert = async (req, res) => {
   }
 };
 
+// Admin: edit alert (nama, deskripsi, severity, tipe, rekomendasi)
+export const updateAlert = async (req, res) => {
+  try {
+    const { type, name, description, severity, recommendedAction } = req.body;
+    const alert = await Alert.findByIdAndUpdate(
+      req.params.id,
+      { type, name, description, severity, recommendedAction },
+      { new: true, runValidators: true }
+    );
+    if (!alert) return res.status(404).json({ message: "Alert not found" });
+    res.json(alert);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+// Admin: lihat semua alert dari seluruh user
+export const getAllAlerts = async (req, res) => {
+  try {
+    const alerts = await Alert.find()
+      .populate({
+        path: "crop",
+        select: "name variety farm",
+        populate: { path: "farm", select: "name user", populate: { path: "user", select: "name" } },
+      })
+      .sort({ createdAt: -1 });
+    res.json(alerts);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 // Farmer: lihat semua alert untuk salah satu crop miliknya
 export const getAlertsByCrop = async (req, res) => {
   try {

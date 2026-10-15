@@ -1,0 +1,543 @@
+/* ===================================================================
+   Agri-Tech Next-Gen Design System
+   Modern, Clean, High-Precision Agriculture Platform
+   =================================================================== */
+
+:root {
+  /* -- Brand Emerald & Forest Palette --------------------------------- */
+  --agri-primary: #059669;
+  --agri-primary-hover: #047857;
+  --agri-primary-dark: #064e3b;
+  --agri-primary-deep: #022c22;
+  --agri-primary-light: #10b981;
+  --agri-primary-soft: #ecfdf5;
+  --agri-primary-border: #a7f3d0;
+  --agri-primary-glow: rgba(16, 185, 129, 0.22);
+
+  /* -- Harvest Gold / Amber Accent ----------------------------------- */
+  --agri-accent: #f59e0b;
+  --agri-accent-hover: #d97706;
+  --agri-accent-soft: #fef3c7;
+  --agri-accent-border: #fde68a;
+
+  /* -- Sky & Atmosphere ---------------------------------------------- */
+  --agri-sky: #0284c7;
+  --agri-sky-soft: #e0f2fe;
+  --agri-sky-border: #bae6fd;
+
+  /* -- Tilled Soil & Clay -------------------------------------------- */
+  --agri-earth: #78350f;
+  --agri-earth-soft: #fef3c7;
+
+  /* -- Alert & Crimson ----------------------------------------------- */
+  --agri-danger: #dc2626;
+  --agri-danger-soft: #fee2e2;
+  --agri-danger-border: #fecaca;
+
+  /* -- Modern Neutrals & Surfaces ------------------------------------ */
+  --agri-bg: #f8fafc;
+  --agri-bg-alt: #f1f5f9;
+  --agri-card-bg: #ffffff;
+  --agri-border: #e2e8f0;
+  --agri-border-subtle: #edf2f7;
+
+  /* -- Typography ---------------------------------------------------- */
+  --agri-text: #0f172a;
+  --agri-text-muted: #64748b;
+  --agri-text-subtle: #94a3b8;
+
+  /* -- Elevation Shadows --------------------------------------------- */
+  --agri-shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --agri-shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --agri-shadow-md: 0 6px 18px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+  --agri-shadow-lg: 0 16px 32px -4px rgba(15, 23, 42, 0.08), 0 6px 16px -2px rgba(15, 23, 42, 0.04);
+  --agri-shadow-primary: 0 8px 24px -4px rgba(5, 150, 105, 0.28);
+
+  /* -- Bootstrap 5 Overrides ----------------------------------------- */
+  --bs-font-sans-serif: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --bs-body-bg: var(--agri-bg);
+  --bs-body-color: var(--agri-text);
+  --bs-border-color: var(--agri-border);
+
+  --bs-primary: #059669;
+  --bs-primary-rgb: 5, 150, 105;
+  --bs-success: #10b981;
+  --bs-success-rgb: 16, 185, 129;
+  --bs-warning: #f59e0b;
+  --bs-warning-rgb: 245, 158, 11;
+  --bs-danger: #dc2626;
+  --bs-danger-rgb: 220, 38, 38;
+  --bs-info: #0284c7;
+  --bs-info-rgb: 2, 132, 199;
+  --bs-dark: #0f172a;
+  --bs-dark-rgb: 15, 23, 42;
+  --bs-light: #f8fafc;
+  --bs-light-rgb: 248, 250, 252;
+
+  --bs-border-radius: 12px;
+  --bs-border-radius-sm: 8px;
+  --bs-border-radius-lg: 16px;
+  --bs-border-radius-xl: 22px;
+}
+
+body {
+  background-color: var(--agri-bg);
+  color: var(--agri-text);
+  font-family: var(--bs-font-sans-serif);
+  min-height: 100vh;
+}
+
+/* ===================================================================
+   Layout Containers
+   =================================================================== */
+.page-container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.feed-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .page-container,
+  .feed-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ===================================================================
+   Navigation Bar
+   =================================================================== */
+.agri-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
+  transition: all 0.25s ease;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.agri-navbar-admin {
+  background: rgba(15, 23, 42, 0.96);
+  border-bottom: 1px solid rgba(51, 65, 85, 0.85);
+}
+
+.agri-brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #064e3b !important;
+}
+
+.agri-navbar-admin .agri-brand {
+  color: #ffffff !important;
+}
+
+.agri-brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #059669, #10b981);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.3);
+}
+
+.agri-nav-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: #475569 !important;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 8px;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.agri-nav-link:hover {
+  color: #059669 !important;
+  background-color: rgba(5, 150, 105, 0.06);
+}
+
+.agri-nav-link.active {
+  color: #059669 !important;
+  background-color: var(--agri-primary-soft);
+}
+
+.agri-navbar-admin .agri-nav-link {
+  color: #cbd5e1 !important;
+}
+
+.agri-navbar-admin .agri-nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.agri-navbar-admin .agri-nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(16, 185, 129, 0.25);
+}
+
+/* ===================================================================
+   Cards & Surfaces
+   =================================================================== */
+.agri-card {
+  background: #ffffff;
+  border: 1px solid var(--agri-border);
+  border-radius: 16px;
+  box-shadow: var(--agri-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.agri-card:hover {
+  border-color: #cbd5e1;
+}
+
+.agri-card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.agri-card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--agri-shadow-lg);
+  border-color: var(--agri-primary-border);
+}
+
+.agri-glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  box-shadow: var(--agri-shadow-md);
+}
+
+/* ===================================================================
+   Icon Boxes & Accents
+   =================================================================== */
+.agri-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.agri-icon-box-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.agri-icon-box-lg {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.agri-icon-emerald {
+  background-color: var(--agri-primary-soft);
+  color: var(--agri-primary);
+  border: 1px solid var(--agri-primary-border);
+}
+
+.agri-icon-amber {
+  background-color: var(--agri-accent-soft);
+  color: var(--agri-accent-hover);
+  border: 1px solid var(--agri-accent-border);
+}
+
+.agri-icon-sky {
+  background-color: var(--agri-sky-soft);
+  color: var(--agri-sky);
+  border: 1px solid var(--agri-sky-border);
+}
+
+.agri-icon-danger {
+  background-color: var(--agri-danger-soft);
+  color: var(--agri-danger);
+  border: 1px solid var(--agri-danger-border);
+}
+
+.agri-icon-dark {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+
+/* ===================================================================
+   Buttons
+   =================================================================== */
+.btn {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.55rem 1.15rem;
+  transition: all 0.18s ease;
+  letter-spacing: -0.01em;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-success,
+.btn-primary {
+  background: linear-gradient(135deg, #059669, #047857);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+}
+
+.btn-success:hover,
+.btn-primary:hover {
+  background: linear-gradient(135deg, #047857, #064e3b);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+  color: #ffffff;
+}
+
+.btn-outline-success {
+  color: #059669;
+  border: 1.5px solid #059669;
+  background: transparent;
+}
+
+.btn-outline-success:hover {
+  background: #059669;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+}
+
+.btn-outline-primary {
+  color: #0284c7;
+  border: 1.5px solid #0284c7;
+  background: transparent;
+}
+
+.btn-outline-primary:hover {
+  background: #0284c7;
+  color: #ffffff;
+}
+
+.btn-outline-danger {
+  color: #dc2626;
+  border: 1.5px solid #dc2626;
+  background: transparent;
+}
+
+.btn-outline-danger:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+/* ===================================================================
+   Data Tables
+   =================================================================== */
+.agri-table-wrapper {
+  background: #ffffff;
+  border: 1px solid var(--agri-border);
+  border-radius: 16px;
+  box-shadow: var(--agri-shadow-sm);
+  overflow: hidden;
+}
+
+.table {
+  margin-bottom: 0;
+  color: var(--agri-text);
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: #f8fafc;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  padding: 0.95rem 1.15rem;
+  border-bottom: 1px solid var(--agri-border);
+}
+
+.table tbody td {
+  padding: 1rem 1.15rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.92rem;
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #f8fafc;
+}
+
+/* ===================================================================
+   Badges & Pills
+   =================================================================== */
+.badge {
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 0.38em 0.75em;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+}
+
+.badge-soft-success {
+  background-color: var(--agri-primary-soft);
+  color: var(--agri-primary-dark);
+  border: 1px solid var(--agri-primary-border);
+}
+
+.badge-soft-warning {
+  background-color: var(--agri-accent-soft);
+  color: #92400e;
+  border: 1px solid var(--agri-accent-border);
+}
+
+.badge-soft-info {
+  background-color: var(--agri-sky-soft);
+  color: #0369a1;
+  border: 1px solid var(--agri-sky-border);
+}
+
+.badge-soft-danger {
+  background-color: var(--agri-danger-soft);
+  color: #991b1b;
+  border: 1px solid var(--agri-danger-border);
+}
+
+.badge-soft-secondary {
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+}
+
+/* ===================================================================
+   Forms & Inputs
+   =================================================================== */
+.form-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #334155;
+  margin-bottom: 0.4rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border: 1px solid var(--agri-border);
+  padding: 0.65rem 0.95rem;
+  font-size: 0.94rem;
+  background-color: #ffffff;
+  color: var(--agri-text);
+  transition: all 0.18s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--agri-primary);
+  box-shadow: 0 0 0 3px var(--agri-primary-glow);
+}
+
+/* ===================================================================
+   Page Headers
+   =================================================================== */
+.agri-page-header {
+  margin-bottom: 1.75rem;
+}
+
+.agri-page-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.agri-page-subtitle {
+  font-size: 0.96rem;
+  color: #64748b;
+  margin-bottom: 0;
+}
+
+/* ===================================================================
+   Weather & Atmospheric Cards
+   =================================================================== */
+.weather-hero-card {
+  background: linear-gradient(135deg, #064e3b 0%, #047857 55%, #059669 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 36px -8px rgba(4, 120, 87, 0.35);
+}
+
+.weather-hero-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.weather-metric-pill {
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+}
+
+/* ===================================================================
+   Hero Section
+   =================================================================== */
+.hero-gradient-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(5, 150, 105, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(245, 158, 11, 0.07) 0%, transparent 40%),
+              #ffffff;
+  border-bottom: 1px solid var(--agri-border);
+}
+
+/* ===================================================================
+   Footer
+   =================================================================== */
+.agri-footer {
+  margin-top: auto;
+  background: #ffffff;
+  border-top: 1px solid var(--agri-border);
+  padding: 2.5rem 0 1.5rem 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}

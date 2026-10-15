@@ -22,6 +22,18 @@ export const createCrop = async (req, res) => {
   }
 };
 
+// Admin: get all crops across all users (buat pilih crop pas bikin Alert)
+export const getAllCrops = async (req, res) => {
+  try {
+    const crops = await Crop.find()
+      .populate({ path: "farm", select: "name location user", populate: { path: "user", select: "name" } })
+      .sort({ createdAt: -1 });
+    res.json(crops);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
 // Get all crops for a specific farm
 export const getCropsByFarm = async (req, res) => {
   try {

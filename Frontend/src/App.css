@@ -1,0 +1,36 @@
+/* Agri-Tech application utility styles */
+.agri-animate-fade {
+  animation: agriFadeIn 0.3s ease-in-out;
+}
+
+@keyframes agriFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.agri-crop-card-img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  transition: transform 0.35s ease;
+}
+
+.agri-card:hover .agri-crop-card-img {
+  transform: scale(1.04);
+}
+
+.agri-overflow-hidden {
+  overflow: hidden;
+}
+
+.agri-pointer {
+  cursor: pointer;
+}
